@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samolot Duży-Międzykontynetalny</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+ 
+   body {
+    position: relative;
+   }
+   
+   .maxPlane{
+       display:flex;
+       position: relative;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       width: 40%;
+       min-width: 300px;
+       margin-top: 3vh;
+       margin-bottom: 3vh;
+       margin-left: 3vh;
+       border-radius: 45%;
+       height: 400vh;
+       background-color: gray;
+       font-family: Arial, Helvetica, sans-serif;
+
+
+   }
+   .pilot{
+    width: 30%;
+    height:26vh;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius:10%;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    position: absolute;
+    top:8vh;
+    margin-top: 5vh;
+    
+}
+.CoffeToiletTopEnd{
+    display: flex;
+    text-align: center;
+    width: 70%;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3vh;
+
+
+}
+.wc1{
+    width: 25%;
+    height: 10vh;
+    background-color: rgb(102, 186, 238);
+    color: white;
+    line-height: 8vh;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius:40%;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    font-size: 2vh;
+    
+}
+.wc1:hover{
+    background-image: url("https://media.istockphoto.com/photos/blue-clear-water-with-many-waves-picture-id975708424?k=6&m=975708424&s=612x612&w=0&h=qcNFkTEf3ll0y8BKzMEMfQXoRAQGCiPnuK40oApnCzQ=");
+}
+.coffe1{
+    
+    width: 40%;
+    height: 10vh;
+    background-color: rgb(102, 186, 238);
+    color: white;
+    line-height: 8vh;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius:40%;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    font-size: 2vh;
+}
+
+.coffe1:hover{
+    background-image: url("https://cdn.pixabay.com/photo/2016/04/12/11/19/coffee-1324126__340.jpg");
+}
+
+   .buisnessClass{
+        width: 60%;
+        background-color:rgba(248, 248, 255, 0.815);
+        text-align: center;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border-radius:10%;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        margin-bottom: 2vh;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+   }
+   .economyClass{
+    width: 60%;
+    background-color:rgba(248, 248, 255, 0.815);
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius:10%;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    margin-bottom: 2vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+   .economy{
+    display: flex;
+    height:210vh;
+    background-color:gray;
+    width: 80%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;  
+    margin-top: 2vh;
+    border-radius: 12%;
+}
+
+.economy_left{
+    display:flex;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-basis: 18%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+
+    
+
+}
+
+.economy_left div{
+  flex-basis: 34%;
+}
+
+   .economy_right{
+    display:flex;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-basis: 18%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+
+    
+
+}
+.economy_right div{
+ flex-basis: 34%;
+}
+
+.economy_center{
+    display:flex;
+    justify-content: space-around;
+    align-content: space-around;
+    flex-basis: 36%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    
+
+}
+
+.economy_center div{
+
+ flex-basis: 21%;
+ 
+
+}
+.business1{
+    display: flex;
+    height:45vh;
+    background-color: gray;
+    width: 82%;
+    flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: space-around;
+     align-content: space-around;
+     border-radius: 20%;
+     margin-top: 4vh;
+}
+
+.business1_left{
+    display:flex;
+    justify-content: space-around;
+    align-content: space-around;
+    width: 45%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    background-color: gray;
+    
+
+}
+.business1_left  div{
+ flex-basis: 35%;
+ font-weight: bold;
+ }
+
+.business1_right{
+    display:flex;
+    justify-content: space-around;
+     align-content: space-around;
+    width: 45%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    background-color:grey;
+
+}
+.business1_right div{
+ flex-basis: 35%;
+ font-weight: bold;
+ }
+.seat{
+  height: 4vh;
+ margin-top: 0.3vh;
+ margin-bottom: 0.3vh;
+ background-color: cadetblue;
+ font-size: 2vh;
+ color:white;
+ text-align: center;
+ line-height: 4vh;
+ border-radius: 40%;
+ cursor: pointer; 
+}
+.selected {
+  background-color: orange;
+  }
+
+  .occupied {
+  background-color: rgb(221, 26, 26);
+  }
+
+  .seat:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1.3);
+}
+.seat.occupied:hover{
+  cursor: default;
+  background-color: rgb(221, 26, 26);
+}
+#economyWc1{
+    flex-basis: 80%;
+    height: 8vh;
+    background-color: rgb(102, 186, 238);
+    color: white;
+    line-height: 8vh;
+    border-radius: 40%;
+    text-align: center;
+}
+#economyWc1:hover{
+    background-image: url("https://media.istockphoto.com/photos/blue-clear-water-with-many-waves-picture-id975708424?k=6&m=975708424&s=612x612&w=0&h=qcNFkTEf3ll0y8BKzMEMfQXoRAQGCiPnuK40oApnCzQ=");
+}
+#economyCoffe1{
+    flex-basis: 80%;
+    height: 8vh;
+    background-color: rgb(102, 186, 238);
+    color: white;
+    line-height: 8vh;
+    border-radius: 40%;
+    text-align: center;
+}
+#economyCoffe1:hover{
+    background-image: url("https://cdn.pixabay.com/photo/2016/04/12/11/19/coffee-1324126__340.jpg");
+}
+#staffB{
+    background-color: rgb(241, 227, 25);
+}
+#staffB:hover{
+    background-color: darkgoldenrod;
+}
+.one:hover{
+    background-color:green;
+    color: white;
+   
+    
+}
+div.one~div:hover {
+    background-color: green;
+    color: white;
+   }
+   .summaryClient{
+     display: flex;
+     width:35%;
+     flex-direction: column;
+     position: fixed;
+     top:1%;
+     right:3%;
+   }
+
+/* wybór klasy i rodzaje miejsc */
+
+.movie-container {
+  margin-bottom: 1vh;
+  display: flex;
+  height:35.5vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(190, 185, 185);
+  border-radius: 5%;
+  color:white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3vh;
+  font-weight: bold;
+  padding: 2vh;
+}
+
+.movie-container select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  padding: 1vh 2vh;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  font-size: 2.5vh;
+  border-radius: 3%;
+  border: 1px solid gray;
+  color:gold;
+  font-weight: bold;
+}
+
+
+.nameFly{
+  font-size: 2vh;
+}
+.descrClass{
+  font-size: 1.5vh;
+}
+
+
+.showcase {
+  display: flex;
+  justify-content: space-around;
+  background: gray;
+  padding: 1vh 1vh;
+  border-radius: 5px;
+  margin: 2vh;
+  width: 75%;
+  
+
+  
+}
+.showcase .seat{
+    height: 6vh;
+    flex-basis: 30%;
+    display: flex;
+    color: white;
+}
+.showcase small{
+  text-align: center;
+  padding-left: 0.8vh;
+  padding-top: 1vh;
+  font-size: 1.5vh;
+}
+
+.showcase .seat:not(.occupied):hover{
+cursor: default;
+transform: scale(1);
+}
+
+
+
+.summarySeatsTickets{
+  padding: 1vh;
+  border-radius: 5%;
+  background-color: rgb(190, 185, 185);
+  height:35.5vh;
+  text-align: center;
+  margin-bottom: 1vh;
+}
+.summarySeatsTickets div{
+  color:white;
+  padding: 1vh, 1vh;
+  font-size: 3vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+.summarySeatsTickets .text{
+  margin-top: 1vh;
+}
+
+.summarySeatsTickets span{
+  color:gold;
+  font-size: 4vh;
+}
+
+.submRes button{
+  letter-spacing: 4px;
+  padding: 0.4vh;
+  background-color: darkblue;
+  font-size: 2vh;
+  color:yellow;
+  font-weight: 750;
+  text-decoration: none;
+  border: 1px solid yellow;
+  border-radius: 10%;
+  transition: 0.3s;
+}
+.submRes button:hover{
+  background-color: gold;
+  color:darkblue;
+  border: 2px solid darkblue;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+/* kalkulator biletowy */
+.ticktetsCalc{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 25vh;
+    padding: 2vh 2vh 0 2vh;
+    align-items: center;
+    background-color: rgb(190, 185, 185);
+    color: white;
+    font-size: 3vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-radius: 5%;
+}
+
+.ticktetsCalc_inside{
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+.ticktetsCalc_inside select{
+  padding: 0.3vh;
+  margin-top: 0.5vh;
+  font-size: 2.5vh;
+  border-radius: 3%;
+  border: 1px solid gray;
+  color:gray;
+  font-weight: bold;
+}
+
+.resultField2{
+  color:gold;
+  font-size: 4vh;
+}
+.valueInput{
+  font-size: 2vh;
+  color: gray;
+}
+.calcCurrency{
+  font-size: 2.5vh;
+}
+
+@media(max-width:768px){
+  body{
+    height: 450vh;
+    width: 150vw;
+  }
+  .maxPlane{
+    width: 60%;
+    margin: 0.2vh;
+    
+  }
+  .summaryClient{
+   width: 29%;
+   margin: 0.3vh;
+  }
+}
+
+@media(max-width:640px){
+  body{
+    
+    width:200vw;
+  }
+  .summaryClient{
+   width: 36%;
+   height: 130h;
+  }
+  .summarySeatsTickets{
+    font-size: 1wv;
+  }
+
+}
+@media(max-width:460px){
+.movie-container{
+  font-size: 2vh;
+}
+.showcase {
+  
+  padding: 0.5vh;
+  border-radius: 5px;
+  margin: 0.7vh;
+  }
+}
+    </style>
+</head>
+    <section class="maxPlane">
+        <div class="pilot">Pilots of the plane</div>
+        <div class="CoffeToiletTopEnd">
+            <div class="wc1">WC</div>
+            <div class="coffe1"><i class="fas fa-coffee"></i>Coffe</div>
+        </div>
+        <div class="buisnessClass">Buisness class</div>
+        <div class="business1">
+           <div class="business1_left">
+             <div class="seat one">1A</div>
+             <div class="seat">1C</div>
+             <div class="seat occupied">2A</div>
+             <div class="seat occupied">2C</div>
+             <div class="seat">3A</div>
+             <div class="seat">3C</div>
+             <div class="seat">4A</div>
+             <div class="seat">4C</div>
+             <div class="seat">5A</div>
+             <div class="seat">5C</div>
+                      
+           </div>
+      
+         <div class="business1_right">
+            <div class="seat one">1F</div>
+             <div class="seat">1H</div>
+             <div class="seat">2F</div>
+             <div class="seat">2H</div>
+             <div class="seat">3F</div>
+             <div class="seat">3H</div>
+             <div class="seat">4F</div>
+             <div class="seat">4H</div>
+             <div class="seat">5F</div>
+             <div class="seat">5H</div>
+             
+                      
+         </div>
+        
+        
+     </div>
+
+     <div class="economyClass">Economy class</div>
+     <div class="economy">
+       <div class="economy_left">
+        <div id="economyWc1">WC</div>
+           <div class="seat one">06A</div>
+           <div class="seat">06B</div>
+           <div class="seat">07A</div>
+           <div class="seat">07B</div>
+           <div class="seat">08A</div>
+           <div class="seat">08B</div>
+           <div class="seat">09A</div>
+           <div class="seat">09B</div>
+           <div class="seat">10A</div>
+           <div class="seat">10B</div>
+           <div class="seat">11A</div>
+           <div class="seat">11B</div>
+           <div class="seat">12A</div>
+           <div class="seat">12B</div>
+           <div class="seat">13A</div>
+           <div class="seat">13B</div>
+           <div class="seat occupied">14A</div>
+           <div class="seat occupied">14B</div>
+           <div class="seat occupied">15A</div>
+           <div class="seat">15B</div>
+           <div class="seat">16A</div>
+           <div class="seat">16B</div>
+           <div class="seat">17A</div>
+           <div class="seat">17B</div>
+           <div class="seat">18A</div>
+           <div class="seat">18B</div>
+           <div class="seat">19A</div>
+           <div class="seat">19B</div>
+           <div class="seat">20A</div>
+           <div class="seat">20B</div>
+           <div class="seat">21A</div>
+           <div class="seat">21B</div>
+           <div class="seat">22A</div>
+           <div class="seat">22B</div>
+           <div class="seat">23A</div>
+           <div class="seat">23B</div>
+           <div id="economyWc1">WC</div>
+           <div class="seat one">24A</div>
+                <div class="seat">24B</div>
+                <div class="seat">25A</div>
+                <div class="seat occupied">25B</div>
+                <div class="seat">26A</div>
+                <div class="seat">26B</div>
+                <div class="seat">27A</div>
+                <div class="seat">27B</div>
+                <div class="seat">28A</div>
+                <div class="seat">28B</div>
+                <div class="seat">29A</div>
+                <div class="seat">29B</div>
+                <div class="seat">30A</div>
+                <div class="seat">30B</div>
+                <div class="seat occupied">31A</div>
+                <div class="seat">31B</div>
+                <div class="seat">32A</div>
+                <div class="seat">32B</div>
+                <div class="seat">33A</div>
+                <div class="seat">33B</div>
+                <div class="seat">34A</div>
+                <div class="seat">34B</div>
+                <div class="seat">35A</div>
+                <div class="seat">35B</div>
+                <div class="seat">36A</div>
+                <div class="seat">36B</div>
+                <div class="seat">37A</div>
+                <div class="seat">37B</div>
+                <div class="seat">38A</div>
+                <div class="seat">38B</div>
+                    
+        </div> 
+        <div class="economy_center">
+            <div id="economyCoffe1">Coffe</div>
+            <div class="seat one">06C</div>
+            <div class="seat">06D</div>
+            <div class="seat">06E</div>
+            <div class="seat">06F</div>
+            <div class="seat">07C</div>
+            <div class="seat">07D</div>
+            <div class="seat">07E</div>
+            <div class="seat">07F</div>
+            <div class="seat">08C</div>
+            <div class="seat">08D</div>
+            <div class="seat">08E</div>
+            <div class="seat">08F</div>
+            <div class="seat">09C</div>
+            <div class="seat">09D</div>
+            <div class="seat">09E</div>
+            <div class="seat">09F</div>
+            <div class="seat">10C</div>
+            <div class="seat">10D</div>
+            <div class="seat">10E</div>
+            <div class="seat">10F</div>
+            <div class="seat">11C</div>
+            <div class="seat">11D</div>
+            <div class="seat">11E</div>
+            <div class="seat">11F</div>
+            <div class="seat">12C</div>
+            <div class="seat">12D</div>
+            <div class="seat">12E</div>
+            <div class="seat">12F</div>
+            <div class="seat">13C</div>
+            <div class="seat">13D</div>
+            <div class="seat">13E</div>
+            <div class="seat">13F</div>
+            <div class="seat">14C</div>
+            <div class="seat">14D</div>
+            <div class="seat">14E</div>
+            <div class="seat">14F</div>
+            <div class="seat">15C</div>
+            <div class="seat">15D</div>
+            <div class="seat">15E</div>
+            <div class="seat">15F</div>
+            <div class="seat">16C</div>
+            <div class="seat">16D</div>
+            <div class="seat">16E</div>
+            <div class="seat">16F</div>
+            <div class="seat">17C</div>
+            <div class="seat">17D</div>
+            <div class="seat">17E</div>
+            <div class="seat">17F</div>
+            <div class="seat">18C</div>
+            <div class="seat">18D</div>
+            <div class="seat">18E</div>
+            <div class="seat">18F</div>
+            <div class="seat">19C</div>
+            <div class="seat">19D</div>
+            <div class="seat">19E</div>
+            <div class="seat">19F</div>
+            <div class="seat">20C</div>
+            <div class="seat">20D</div>
+            <div class="seat">20E</div>
+            <div class="seat">20F</div>
+            <div class="seat">21C</div>
+            <div class="seat">21D</div>
+            <div class="seat">21E</div>
+            <div class="seat">21F</div>
+            <div class="seat">22C</div>
+            <div class="seat">22D</div>
+            <div class="seat">22E</div>
+            <div class="seat">22F</div>
+            <div class="seat occupied">23C</div>
+            <div class="seat">23D</div>
+            <div class="seat">23E</div>
+            <div class="seat">23F</div>
+            
+            
+            
+            <div id="economyCoffe1">Coffe</div>
+            <div class="seat one">24C</div>
+                 <div class="seat">24D</div>
+                 <div class="seat">24E</div>
+                 <div class="seat">24F</div>
+                 <div class="seat">25C</div>
+                 <div class="seat">25D</div>
+                 <div class="seat">25E</div>
+                 <div class="seat">25F</div>
+                 <div class="seat">26C</div>
+                 <div class="seat">26D</div>
+                 <div class="seat">26E</div>
+                 <div class="seat">26F</div>
+                 <div class="seat">27C</div>
+                 <div class="seat">27D</div>
+                 <div class="seat">27E</div>
+                 <div class="seat">27F</div>
+                 <div class="seat">28C</div>
+                 <div class="seat">28D</div>
+                 <div class="seat">28E</div>
+                 <div class="seat">28F</div>
+                 <div class="seat">29C</div>
+                 <div class="seat">29D</div>
+                 <div class="seat">29E</div>
+                 <div class="seat">29F</div>
+                 <div class="seat">30C</div>
+                 <div class="seat occupied">30D</div>
+                 <div class="seat occupied">30E</div>
+                 <div class="seat">30F</div>
+                 <div class="seat">31C</div>
+                 <div class="seat">31D</div>
+                 <div class="seat">31E</div>
+                 <div class="seat">31F</div>
+                 <div class="seat">32C</div>
+                 <div class="seat">32D</div>
+                 <div class="seat">32E</div>
+                 <div class="seat">32F</div>
+                 <div class="seat">33C</div>
+                 <div class="seat">33D</div>
+                 <div class="seat">33E</div>
+                 <div class="seat">33F</div>
+                 <div class="seat">34C</div>
+                 <div class="seat">34D</div>
+                 <div class="seat">34E</div>
+                 <div class="seat">34F</div>
+                 <div class="seat">35C</div>
+                 <div class="seat">35D</div>
+                 <div class="seat">35E</div>
+                 <div class="seat">35F</div>
+                 <div class="seat">36C</div>
+                 <div class="seat">36D</div>
+                 <div class="seat">36E</div>
+                 <div class="seat">36F</div>
+                 <div class="seat">37C</div>
+                 <div class="seat">37D</div>
+                 <div class="seat">37E</div>
+                 <div class="seat">37F</div>
+                 <div id="staffB">staff</div>
+                 <div id="staffB">staff</div>
+                 <div id="staffB">staff</div>
+                 
+                 
+                    
+            
+            
+            
+        </div> 
+        
+       <div class="economy_right">
+        <div id="economyWc1">WC</div>
+        <div class="seat one">06G</div>
+        <div class="seat">06H</div>
+        <div class="seat">07G</div>
+        <div class="seat">07H</div>
+        <div class="seat">08G</div>
+        <div class="seat">08H</div>
+        <div class="seat">09G</div>
+        <div class="seat">09H</div>
+        <div class="seat">10G</div>
+        <div class="seat">10H</div>
+        <div class="seat">11G</div>
+        <div class="seat">11H</div>
+        <div class="seat">12G</div>
+        <div class="seat">12H</div>
+        <div class="seat">13G</div>
+        <div class="seat">13H</div>
+        <div class="seat">14G</div>
+        <div class="seat">14H</div>
+        <div class="seat">15G</div>
+        <div class="seat">15H</div>
+        <div class="seat">16G</div>
+        <div class="seat">16H</div>
+        <div class="seat">17G</div>
+        <div class="seat">17H</div>
+        <div class="seat">18G</div>
+        <div class="seat">18H</div>
+        <div class="seat">19G</div>
+        <div class="seat">19H</div>
+        <div class="seat">20G</div>
+        <div class="seat">20H</div>
+        <div class="seat">21G</div>
+        <div class="seat">21H</div>
+        <div class="seat">22G</div>
+        <div class="seat">22H</div>
+        <div class="seat">23G</div>
+        <div class="seat">23H</div>
+        <div id="economyWc1">WC</div>
+        <div class="seat one">24G</div>
+        <div class="seat">24H</div>
+        <div class="seat">25G</div>
+        <div class="seat">25H</div>
+        <div class="seat">26G</div>
+        <div class="seat">26H</div>
+        <div class="seat occupied">27G</div>
+        <div class="seat">27H</div>
+        <div class="seat">28G</div>
+        <div class="seat">28H</div>
+        <div class="seat">29G</div>
+        <div class="seat">29H</div>
+        <div class="seat">30G</div>
+        <div class="seat">30H</div>
+        <div class="seat">31G</div>
+        <div class="seat">31H</div>
+        <div class="seat">32G</div>
+        <div class="seat">32H</div>
+        <div class="seat">33G</div>
+        <div class="seat">33H</div>
+        <div class="seat">34H</div>
+        <div class="seat">34G</div>
+        <div class="seat">35G</div>
+        <div class="seat">35H</div>
+        <div class="seat">36G</div>
+        <div class="seat">36H</div>
+        <div class="seat">37G</div>
+        <div class="seat">37H</div>
+        <div class="seat">38G</div>
+        <div class="seat">38H</div>
+
+    </div>
+
+        
+
+
+        
+                
+           
+           
+       </div> 
+
+       
+     </div>
+     <div class="CoffeToiletTopEnd">
+        <div class="wc1">WC</div>
+        <div class="coffe1">Coffe</div>
+    </div>
+       
+
+     </section>
+
+     <section class="summaryClient">
+      
+       
+
+        <div class="movie-container">
+          <div class="flyDirection">Lot Rzeszów - Tokio </div>
+          <hr>
+          <div class="nameFly">Samolot linie kontynentalne:<a class="typeFly"href="https://pl.wikipedia.org/wiki/Airbus_A330">Airbus A330-200</a>
+          
+          </div>
+          <div class="descrClass">Klasa biznesowa 20 miejsc.</div>
+          <div class="descrClass">Klasa ekonomiczna 264 miejsc.</div>
+          <hr>
+            <label>Wybierz klasę: </label>
+            <select id="movie">
+              <option value="5500">Ekonomiczna 5500 PLN</option>
+              <option value="8200">Biznesowa 8200 PLN</option>
+              
+            </select>
+            
+            <div class="showcase">
+              <div class="seat free"><small>Wolne</small></div>
+              <div class="seat selected"><small>Wybrane</small></div>
+              <div class="seat occupied"><small>Zajęte</small></div>
+            </div>
+        </div>
+
+        <div class="summarySeatsTickets">
+    
+          <div class="text">
+            Ilość wybranych miejsc: <br>
+            <span id="count">0</span>. <br>
+            Sumaryczna opłata biletowa:  <br>
+            <span id="total">0</span> PLN.
+          </div>
+          <div class="text2">
+            Wybrane numery siedzień: <br>
+            <span id="seatNumber"></span>.
+          </div>
+            <div class="submRes"><a href=""><button>Rezerwuj</button></a></div>
+        </div>
+
+        <!-- kalkulator biletowy --- -->
+      
+        <div class="ticktetsCalc"> Kalkulator biletowy:
+          <div class="ticktetsCalc_inside">
+            <div class="aaa"><input type="text" id="value" placeholder="wpisz cenę biletu w zł" class="valueInput" > PLN</div>
+            <select name="currency" id="currency" class="currencySelect">
+              <option value="" disabled selected>Wybierz walutę:</option>
+              <option value="usd">Dolar amerykański</option>
+              <option value="eur">Euro</option>
+              <option value="jpy">Jen</option>
+              <option value="gbp">Funt szterling</option>
+              <option value="aud">Dolar australijski</option>
+              <option value="chf">Frank szwajcarski</option>
+              <option value="cnh">Chińskie reminbi</option>
+              <option value="sek">Szwedzka korona</option>
+              <option value="nzd">Dolar nowozelandzki</option>
+            </select>
+          </div>
+          <div class="currencyFinal">
+          <div class="calcCurrency">Po przeliczeniu:</div>
+          <!-- <div id="selected" class="resultField"></div> -->
+            <div id="selected2" class="resultField2"></div>
+            
+          </div>
+        </div>
+      </div>
+
+      </section>
+
+     
+<script>
+
+const container = document.querySelector('.maxPlane');
+const seats = document.querySelectorAll('maxPlane.seat:not(.occupied)');
+const count = document.getElementById('count');
+const total = document.getElementById('total');
+const movieSelect = document.getElementById('movie');
+let seatNumber = document.getElementById('seatNumber');
+
+
+let ticketPrice = +movieSelect.value;
+
+//Update total and count
+function updateSelectedCount() {
+  const selectedSeats = document.querySelectorAll('.maxPlane .seat.selected');
+  const seatNumbers = [...selectedSeats].map((seat)=>seat.innerText);
+  const selectedSeatsCount = selectedSeats.length;
+  count.innerText = selectedSeatsCount;
+  total.innerText = selectedSeatsCount * ticketPrice;
+  seatNumber.innerText = seatNumbers.join(', ') || '-';
+}
+
+//Movie Select Event
+movieSelect.addEventListener('change', e => {
+  ticketPrice = +e.target.value;
+  updateSelectedCount();
+});
+
+//Seat click event
+container.addEventListener('click', e => {
+  if (e.target.classList.contains('seat') &&
+     !e.target.classList.contains('occupied')) {
+    e.target.classList.toggle('selected');
+  }
+  updateSelectedCount();
+});
+
+// ticket calculator---
+const currency = document.getElementById('currency'),
+  showOption = document.getElementById('selected'),
+  showOption2 = document.getElementById('selected2'),
+  inputValue = document.getElementById('value');
+
+currency.addEventListener('change', function () {
+  fetch(`https://api.nbp.pl/api/exchangerates/rates/a/${this.value}/?format=json`)
+    .then((resp) => resp.json())
+    .then(function (data) {
+      console.log(data);
+      showOption2.innerHTML = ` ${(((inputValue.value)/(data.rates[0].mid)).toFixed(2))} `;
+    })
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,436 @@
+/* wyskakujące okienko popup--formularz--- */
+.popup{
+    background: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    display:none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content{
+    height: 100%;
+    width: 70%;
+    background-color: grey;
+    /* background-color: coral; */
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    border: 2px solid slateblue;
+ 
+}
+.popup-content input{
+    display:block;
+    margin: 2px auto 10px auto;
+    width: 90%;
+    padding: 8px 8px 2px 8px;
+    border: 2px solid slateblue;
+    border-radius: 5px;
+}
+.popup-content label{
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    text-align: center;
+
+}
+.close{
+    position: absolute;
+    top:-4px;
+    right: -4px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 29px -4px slateblue;
+    cursor: pointer;
+    /* opacity:0.7; */
+}
+.popup a.button1{
+    position:absolute;
+    bottom:4%;
+    width: auto;
+    text-align: center;
+    padding: 10px 15px;
+    background-color: yellow;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color:darkblue;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-left: 33%;
+    margin-top: 2%;
+    text-decoration: none;
+    transition: 0.4s;
+    letter-spacing: 2px;
+}
+
+a.button1:hover{
+    @include btn-hover;
+    border: 1px solid white;
+}
+
+// popModal bagaż
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+  
+  /* Modal Content/Box */
+  .modal-content1 {
+    background-color: #fefefe;
+    margin: 6% auto; 
+    padding: 10px;
+    border: 1px solid #888;
+    width: 80%; 
+    position: relative;
+    background: linear-gradient(white, darkblue);
+  }
+  
+  /* The Close Button */
+  .close1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    font-size: 4vh;
+    font-weight: bold;
+    z-index: 1;
+    background-color: grey;
+    border-radius: 30%;
+    color: white;
+  }
+  
+  .close1:hover,
+  .close1:focus {
+    background-color: red;
+    text-decoration: none;
+    cursor: pointer;
+    
+  }
+  
+  /* baggage description and choice */
+  body .calcBaggage{
+      margin: 2vh;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      max-width: 1280px;
+      
+  }
+  
+  .baggageDesc{
+      display: flex;
+      
+      width: 90%;
+      align-items: stretch;
+      justify-content: space-around;
+      background-color: slategrey;
+      color: white;
+      
+  }
+  .baggageDesc>div{
+      margin: 2vh;
+      flex-basis: 32%;
+      height: 80%;
+      font-family: Arial, Helvetica, sans-serif;
+      font-style: italic;
+      font-size:2vh;
+  
+  }
+  
+  
+  .baggageDesc span{
+      font-weight: bold;
+      color: gold;
+      font-size: 3vh;
+  }
+  .baggageDesc .infoPriceBag{
+      font-weight: bold;
+      color: gold;
+      font-size: 2vh;
+      .fas{
+        color:gold;
+        font-size: 8vh;
+    }
+  }
+   .baggageForm{
+      display: flex;
+      background-color: #fff;
+      width: 90%;
+      align-items: stretch;
+      justify-content: space-around;
+      background-color: slategrey;
+      color: white;
+      margin-top:2vh;
+  
+  }
+  .bagPerson1{
+      margin: 2vh;
+      flex-basis: 32%;
+      height: 80%;
+      font-family: Arial, Helvetica, sans-serif;
+      font-style: italic;
+      font-size:2vh;
+      margin: 1vh;
+  }
+  .baggSubmit{
+      background-color: gold;
+      color:darkslategrey;
+  }
+  .baggSubmit:hover{
+      color:gold;
+      background-color: darkblue;
+  }
+
+// popModal pogoda dowolne miasto
+.main {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    
+    border-color: blue;
+    box-sizing: border-box;
+   }
+ 
+   .main.blur {
+    filter: blur(2px);
+   }
+   
+ 
+   .modalC-wrapC {
+    display: none;
+   }
+ 
+   .modalC-wrapC.activeC {
+    @include modal-center;
+   }
+ 
+   .modalC-wrapC.activeC .modalC {
+    @include modal-active;
+   }
+   .hideC {
+    @include popM-close;
+    }
+   .hideC:hover{
+       background-color: red;
+       color: white;
+   }
+  
+ 
+   
+ 
+   
+
+
+/* weather--- */
+
+.wrapperC{
+height: 100%;
+width: 100%;
+background: linear-gradient(rgb(248, 249, 250), darkblue);
+font-family: 'Courier New', Courier, monospace;
+color: white;
+/* width:500px; */
+margin: 0 auto;
+padding: 10px;
+text-align: center;
+max-height: 100%;
+max-width: 100%;
+
+}
+
+
+.wrapperC h6{
+font-size: 4vh;
+letter-spacing: 1px;
+font-family: 'Courier New', Courier, monospace;
+padding: 5px 0px;
+margin:3vh 0 3vh 0;
+}
+.wrapperC input[type="text"]{
+height: 35px;
+width: 35%;
+border: 0;
+outline: 0;
+/* margin: 0 50px; */
+/* padding-left: 10px; */
+font-size: 3vh;
+text-align: center;
+color:darkblue;
+letter-spacing: 0.5px;
+text-transform: capitalize;
+box-sizing: border-box;
+font-family: 'Courier New', Courier, monospace;
+}
+::placeholder{
+color:darkcyan;
+}
+.btn{
+padding: 10px 30px;
+margin:10px 0px;
+font-weight: bold;
+letter-spacing: 2px;
+text-transform: uppercase;
+font-weight: bold;
+font-size: 3vh;
+border:none;
+outline: none;
+background: blue;
+border: 2px solid lightblue;
+color: white;
+cursor:pointer;
+transition: 0.3;
+
+}
+
+.btn:hover{
+background: white;
+color: darkblue;
+font-weight: bolder;
+text-transform: uppercase;
+cursor: pointer;
+
+}
+.showData{
+margin: 15px 0px;
+line-height: 1.6;
+font-family: 'Courier New', Courier, monospace;
+}
+.showData ul{
+list-style-type: none;
+font-family: 'Courier New', Courier, monospace;
+
+}
+
+.showData .city{
+font-size: 7vh;
+font-weight: bold;
+font-family: 'Courier New', Courier, monospace;
+
+}
+.showData .temp{
+font-size: 7vh;
+font-weight: bold;
+font-family: 'Courier New', Courier, monospace;
+}
+
+.showData .desc{
+font-size: 3.5vh;
+font-family: 'Courier New', Courier, monospace;
+
+}
+@media(max-width: 800px) {
+    .modal-wrap.active .modal {
+     width: 90%;
+     height: 90%;
+    }
+}
+
+// pogoda miasta przylotu samolotów popModal---
+
+.modalWeatherLong {
+    display: none;
+}
+      
+    .modalWeatherLong.activeW {
+         @include modal-center;
+    }
+      
+        .modalWeatherLong.activeW .modalW {
+        @include modal-active;
+    }
+      
+    .hideW {
+        @include popM-close;
+    }
+    .hideW:hover{
+        background-color: red;
+        color: white;
+        }
+
+
+body .longWeather{
+    margin: 2vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1280px;
+   
+}
+table{
+    display: block;
+    /* display: flex; */
+    text-align: center;
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+    color:beige;
+    font-size: 3vh;
+    text-shadow: 0.8vh;
+    letter-spacing: 1px;
+    background-color: limegreen;
+    margin: 2.5vh;
+    border:3px solid blue;
+    border-spacing: 1.3vh;
+    border-collapse: separate;
+}
+
+
+table caption{
+    font-size: 3vh;
+    color:gold;
+    
+}
+table   td{
+    width: auto;
+    border:2px solid whitesmoke;
+    border-spacing: 1vh;
+    border-collapse: separate;
+
+}
+@media(max-width: 800px) {
+         .modalWeatherLong.activeW .modalW {
+          width: 90%;
+          height: 65%;
+          }
+          table{
+            font-size: 2vh;
+          }
+}
+@media(max-width:494px) {
+         
+          table{
+            letter-spacing: normal;
+            text-shadow: none;
+            margin:1vh;
+            border:1px solid blue;
+            border-spacing: 0.5vh;
+                
+          }
+          table caption{
+        font-size: 2vh;
+        color:wheat;
+          }
+          table tr  {
+            font-size: 1.5vh;
+            font-weight: bolder;
+            font-family: Arial, Helvetica, sans-serif;
+            color:yellow;
+         }
+}
+
+
+
+
+

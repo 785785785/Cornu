@@ -1,0 +1,49 @@
+@import './utils/variables';
+@import './utils/mixins';
+@import './base/header';
+@import './base/main';
+@import './base/choice';
+@import './base/popModals';
+@import './base/typography';
+@import './base/layout';
+@import './base/footer';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $bgc;
+    position:relative;
+    width: 100%;
+    height: auto;
+    min-width: 270px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

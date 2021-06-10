@@ -1,0 +1,580 @@
+.main{
+    height:70vh;
+    box-sizing: border-box;
+}
+
+.reservationInfo{
+    display:flex;
+    height: 70vh;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: $bgc;
+    align-items: center;
+}
+
+// formularz----
+.form_reservation{
+    display: flex;
+    flex-basis: 60%;
+    position: relative;
+    padding-top: 2%;
+    padding-left: 3%;
+    text-align: left;
+    height: 100%;
+    flex-shrink: 1;
+    background-color:$bgc;
+    font-size: 4vh;
+    font-family: "Roboto" sans-serif;
+    font-weight: bolder;
+    color:white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-image: url("../assets/img/skrzydłoA.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form_reservation form{
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+.form_reservation select{
+    display: flex;
+    flex-direction: column;
+    font-size: 3vh;
+    font-family: "Roboto" sans-serif;
+    font-weight: bold;
+    color: $dark-bl;
+    padding-top: 0.4vh;
+    padding-bottom: 0.4vh;
+    border: none;
+}
+.form_reservation input{
+    font-size: 3vh;
+    font-family: "Roboto" sans-serif;
+    font-weight: bold;
+    color: $dark-bl;
+}
+
+.form_reservation label{
+    padding-top: 0.4vh;
+    padding-bottom: 0.4vh;
+    display:block;
+}
+
+.button{
+    position:absolute;
+    top:4%;
+    right: 4%;
+    width:auto;
+    text-align: center;
+    padding: 10px 15px;
+    background-color: yellow;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color:$dark-bl;
+    font-size: 3vh;
+    border-radius: 5px;
+    margin-left: 31%;
+    margin-top: 2%;
+    text-decoration: none;
+    transition: 0.4s;
+    letter-spacing: 2px;
+}
+
+.button:hover{
+    @include btn-hover;
+    background-image: none;
+    border: 1px solid white;
+}
+
+// data -czas -pogoda -obrazy Rzeszów---
+
+.data_time_weather_city{
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-basis: 40%;
+    background-color: $bgc;
+    height: 100%;
+}
+
+.data_time_weather{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    
+
+}
+
+#date_now{
+    width: 95%;
+    height: 15%;
+    line-height: 8vh;
+    background-color:  $dark-bl;
+    border: 2px solid white;
+    font-size: 2.5vh;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+    color: white;
+}
+
+#time_now{
+    width: 95%;
+    height: 15%;
+    line-height: 8vh;
+    font-size: 4vh;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    border: 2px solid white;
+    background-color:$dark-bl;
+}
+
+
+
+/* weather-----------....------ */
+.departure_weather{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    flex-basis: 60%;
+    align-items: center;
+    justify-content: space-around;
+    background-color: $dark-bl;
+    border: 1px solid white;
+
+}
+
+
+.departure_weather #output{
+    width: 80%;
+    flex-basis: 25%;
+    order:1;
+    z-index: 1;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 15px;
+    color:white;
+}
+#image{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    animation: none;
+    flex-basis: 65%;
+  
+}
+#image img{
+    display: block;
+    width: 90%;
+    height: 80%;
+    border-radius: 5%;
+
+}
+// animacja zdjęcia Rzeszów -----------------
+
+ 
+   .imgRzeszow {
+    height: 100%;
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+   }
+   
+ 
+   .imgRzeszow img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    animation: foto 15s infinite linear;
+   }
+ 
+   .imgRzeszow img:nth-child(2) {
+    animation-delay: 5s;
+   }
+ 
+   .imgRzeszow img:nth-child(3) {
+    animation-delay: 10s;
+   }
+ 
+   h5 {
+    position: absolute;
+    font-size: 15px;
+    background-color: rgba(202, 198, 198, 0.6);
+    font-family: 'open sans', sans-serif;
+    color: white;
+    padding: 3px 5px;
+    animation: txt 15s linear infinite both;
+    opacity: 0;
+ 
+   }
+
+    h5:nth-of-type(1) {
+    top: 8%;
+    right: 8%;
+   }
+ 
+   h5:nth-of-type(2) {
+    top: 10%;
+    left: 10%;
+    animation-delay: 5s;
+   }
+ 
+   h5:nth-of-type(3) {
+    top: 4%;
+    left: 56%;
+    animation-delay: 10s;
+   }
+ 
+   @keyframes txt {
+    0% {
+     opacity: 0;
+    }
+ 
+    5% {
+     opacity: 0;
+    }
+ 
+    10% {
+     opacity: 1;
+    }
+ 
+    23.33% {
+     opacity: 1;
+    }
+ 
+    28.33% {
+     opacity: 0;
+    }
+ 
+    33.33% {
+     opacity: 0
+    }
+ 
+    100% {
+     opacity: 0;
+    }
+ 
+ 
+   }
+ 
+   @keyframes foto {
+    0% {
+     opacity: 0;
+    }
+    5% {
+     opacity: 1
+    }
+    33.33% {
+     opacity: 1
+    }
+ 
+    38.33% {
+     opacity: 0;
+    }
+ 
+    100% {
+     opacity: 0;
+    }
+ 
+ 
+   }
+
+
+
+@media (min-width: 978px) and (max-width: 1024px)
+{
+       .form_reservation .button{
+        display: block;
+        font-size: 2vh;
+        position:relative;
+        padding: 8px 10px;
+        }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+    .data_time_weather_city{
+       flex-direction: column;
+       align-items: center;
+       justify-content: space-around;
+       }
+    .data_time_weather{
+        width: 100%;
+        flex-basis: 50%;
+        margin-bottom: 1%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        }
+    .imgRzeszow {
+        flex-basis: 48%;
+        width: 90%;
+               }
+        
+    #date_now{
+        flex-basis: 15%;
+        line-height: 6vh;
+        font-size: 15px;
+        padding: 2px;
+        width: 90%;
+        }
+    #time_now{
+        flex-basis: 15%;
+        line-height: 6vh;
+        font-size: 2.5vh;
+        letter-spacing: 6px;
+        color: white;
+        padding: 2px;
+        width: 90%;
+        }
+
+.departure_weather{
+    flex-basis: 50%;
+    width: 90%;
+}
+
+
+#image img{
+    display: block;
+   width: 60%;
+   
+}
+.form_reservation .button{
+    display: block;
+    font-size: 2vh;
+    position:relative;
+    padding: 8px 10px;
+    }
+}
+
+@media (max-width: 767px) {
+
+  .form_reservation form{
+      padding-top: 5vh;
+  }
+.data_time_weather_city{
+       flex-direction: column;
+       align-items: center;
+       justify-content: space-around;
+       }
+    .data_time_weather{
+        width: 100%;
+        flex-basis: 58%;
+        margin-bottom: 1%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        }
+    .imgRzeszow {
+        flex-basis: 39%;
+        width: 90%;
+        }
+    
+    #date_now{
+        flex-basis: 15%;
+        line-height: 6vh;
+        font-size: 2.2vw;
+        padding: 2px;
+        width: 90%;
+        }
+    #time_now{
+        flex-basis: 15%;
+        line-height: 6vh;
+        font-size: 2.5vh;
+        letter-spacing: 6px;
+        color: white;
+        padding: 2px;
+        width: 90%;
+        }
+
+.departure_weather{
+    flex-basis: 50%;
+    width: 90%;
+}
+
+
+#image img{
+    display: block;
+    width: 65%;
+   
+}
+
+.departure_weather #output{
+    font-size: 2vw;
+}
+h5{
+    font-size: 1.5vh;
+}
+
+    .form_reservation .button{
+        display: block;
+        font-size: 2vh;
+        position:relative;
+        padding: 8px 10px;
+        }
+
+}
+
+@media (max-width: 640px){
+    .form_reservation{
+      
+        font-size: 3vh;
+        
+        letter-spacing: 1px;
+       
+    }
+
+    .form_reservation select{
+      
+        font-size: 2vh;
+        
+    }
+    .form_reservation input{
+        font-size: 2vh;
+      
+    }
+     
+    .form_reservation .button{
+        display: block;
+        font-size: 1.5vh;
+        position:relative;
+        padding: 8px 10px;
+    }
+    
+}
+
+@media (max-width: 480px) {
+
+
+    .form_reservation{
+      
+        font-size: 3vh;
+        
+        letter-spacing: 1px;
+       
+    }
+    .form_reservation form{
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form_reservation select{
+      
+        font-size: 2vh;
+        
+    }
+    .form_reservation input{
+        font-size: 2vh;
+      
+    }
+   
+}
+
+@media(min-width: 100px) 
+and (max-width: 979px) 
+and (orientation: landscape){
+    .imgRzeszow{
+       display: none;
+    }
+    .data_time_weather{
+        width: 90%;
+        flex-basis: 90%;
+    }
+    #image img{
+            display: block;
+            width: 40%;
+    }
+    
+}
+
+@media (width:1024px) and (height:1366px) {
+    .form_reservation form{
+        padding-top: 5vh;
+    }
+  .data_time_weather_city{
+         flex-direction: column;
+         align-items: center;
+         justify-content: space-around;
+         }
+      .data_time_weather{
+          width: 100%;
+          flex-basis: 58%;
+          margin-bottom: 1%;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          flex-direction: column;
+          }
+      .imgRzeszow {
+          flex-basis: 39%;
+          width: 90%;
+          }
+      
+      #date_now{
+          flex-basis: 15%;
+          line-height: 6vh;
+          font-size: 2.2vw;
+          padding: 2px;
+          width: 90%;
+          }
+      #time_now{
+          flex-basis: 15%;
+          line-height: 6vh;
+          font-size: 2.5vh;
+          letter-spacing: 6px;
+          color: white;
+          padding: 2px;
+          width: 90%;
+          }
+  
+  .departure_weather{
+      flex-basis: 50%;
+      width: 90%;
+  }
+  
+  
+  #image img{
+      display: block;
+      width: 65%;
+     
+  }
+  
+  .departure_weather #output{
+      font-size: 2vw;
+  }
+  h5{
+      font-size: 1.5vh;
+  }
+  
+      .form_reservation .button{
+          display: block;
+          font-size: 2vh;
+          position:relative;
+          padding: 8px 10px;
+          }
+}

@@ -1,0 +1,198 @@
+// Wybory pasażera---
+
+.choice{
+    background-color: $bgc;
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+// samolot miejsce bagaż---
+  .place_baggage{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 15vh;
+    margin-top: 2%;
+    background-color: $bgc;
+    font-family: 'Roboto' sans-serif;
+    
+}
+.place{
+    width: 47%;
+    height: 95%;
+    background-color: $dark-bl;
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    // flex-direction: column;
+    font-size: 3vh;
+    a{
+        color:$color-lime;
+        font-size: 2vh;
+        transition: 0.3s;
+        &:hover{
+            @include btn-hover;
+        }
+    }
+    #btn{
+        color:$dark-bl;
+        transition:0.3s;
+        background-color: greenyellow;
+        &:hover{
+            @include btn-hover;
+        }
+    }
+
+}
+
+.typeFly{
+    flex-basis: 40%;
+ 
+}
+
+.baggage{
+    width: 47%;
+    height: 95%;
+    background-color: $dark-bl;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+.baggage .fas{
+    color:$color-lime;
+}
+
+// pogoda---
+.weatherCitiesLong{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 10vh;
+    margin-top: 2%;
+    background-color: $bgc;
+}
+.weatherAllCities{
+    width: 47%;
+    height: 90%;
+    background-color: $dark-bl;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.weatherDeparturesLong{
+    width: 47%;
+    height: 90%;
+    background-color:$dark-bl;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+// buttons---
+.choiceW{
+    display:block;
+    flex-basis: 70%;
+    font-size: 3vh;
+    font-family: 'Roboto' sans-serif;
+    color: $dark-bl;
+    transition: 0.5s;
+        &:hover{
+            @include btn-hover;
+        }
+}
+
+// / mały średni  duży samolot----------------------
+.flySmall{
+    display: none;
+}
+.flyMedium{
+    display: none;
+
+}
+.flyMax{
+    display: none;
+}
+.active0{
+    display: block;
+}
+.active01{
+    display: block;
+}
+.active02{
+    display: block;
+}
+
+
+@media(max-width:640px){
+    .choice button{
+        font-size: 2.3vh;
+    }
+
+    .place{
+        
+        font-size: 2.3vh;
+        a{
+            font-size: 1.8vh;
+        }
+        #plane{
+            font-size: 1.8vh;
+        }
+    }
+}
+
+@media(max-width:460px){
+    .choice button{
+        font-size: 2vh;
+    }
+    .place{
+        font-size: 2vh;
+        a{
+            font-size: 1.6vh;
+        }
+        #plane{
+            font-size: 1.6vh;
+        }
+    }
+}
+
+@media(max-width:360px){
+    .choice button{
+        font-size: 1.8vh;
+    }
+    .place{
+        font-size: 1.8vh;
+        a{
+            font-size: 1.5vh;
+        }
+    }
+}
+
+@media (width:1024px) and (height:1366px) {
+    .choice button{
+        font-size: 1.9vh;
+    }
+    .place{
+        font-size: 1.8vh;
+        a{
+            font-size: 1.5vh;
+        }
+    }
+}
+
+@media (width:768px) and (height:1024px) {
+    .choice button{
+        font-size: 1.9vh;
+    }
+    .place{
+        font-size: 1.8vh;
+        a{
+            font-size: 1.5vh;
+        }
+    }
+}

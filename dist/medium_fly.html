@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Średni samolot - Europa</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+ 
+   body {
+    position: relative;
+   }
+   
+   .mediumPlane{
+    position: absolute;
+    top:3%;
+    left:3%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+       display:flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       width: 40%;
+       min-width: 300px;
+       margin-top: 2vh;
+       border-radius: 45%;
+       height: 260vh;
+       background-color: rgb(190, 185, 185);
+       font-family: Arial, Helvetica, sans-serif;
+
+
+   }
+   .pilot{
+    width: 60%;
+    background-color:rgba(248, 248, 255, 0.815);
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius:10%;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    margin-bottom: 2vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh; 
+}
+   .buisnessClass{
+        width: 60%;
+        background-color:rgba(248, 248, 255, 0.815);
+        text-align: center;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border-radius:10%;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        margin-bottom: 2vh;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        
+
+   }
+   .economyClass{
+    width: 60%;
+    background-color:rgba(248, 248, 255, 0.815);
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius:10%;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    margin-bottom: 2vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+   .economy{
+    display: flex;
+    height:100vh;
+    background-color: rgb(190, 185, 185);
+    width: 75%;
+    flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: space-around;
+     align-content: space-around;
+     border-radius: 25%;
+     margin-top: 2vh;
+}
+
+.economy_left{
+    display:flex;
+    justify-content: space-around;
+     align-content: space-around;
+    width: 40%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    
+
+}
+.economy_left div{
+  flex-basis: 30.01%;
+}
+
+   .economy_right{
+    display:flex;
+    justify-content: space-around;
+     align-content: space-around;
+    width: 40%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    
+
+}
+.economy_right div{
+ flex-basis: 30.01%;
+}
+
+.business1{
+    display: flex;
+    height:43vh;
+    background-color: rgb(190, 185, 185);
+    width: 75%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    border-radius: 20%;
+    margin-top: 4vh;
+    letter-spacing: 1px;
+}
+
+.business1_left{
+    display:flex;
+    justify-content: space-around;
+    align-content: space-around;
+    width: 43%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    
+
+}
+.business1_left div{
+flex-basis: 35%;
+}
+
+.business1_right{
+    display:flex;
+    justify-content: space-around;
+    align-content: space-around;
+    width: 43%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    
+
+}
+.business1_right div{
+ flex-basis: 35%;
+}
+
+.seat{
+  height: 4vh;
+ margin-top: 0.3vh;
+ margin-bottom: 0.3vh;
+ background-color: cadetblue;
+ font-size: 2vh;
+ color:white;
+ text-align: center;
+ line-height: 4vh;
+ border-radius: 40%;
+ cursor: pointer; 
+}
+
+.selected {
+  background-color: #20bd54;
+  }
+
+  .occupied {
+  background-color: rgb(221, 26, 26);
+  }
+
+  .seat:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1.3);
+}
+.seat.occupied:hover{
+  cursor: default;
+  background-color: rgb(221, 26, 26);
+}
+.wc{
+    flex-basis: 35%;
+    background-color: royalblue;
+    font-size: 2vh;
+    text-align: center;
+    line-height: 4vh;
+    border-radius: 40%;
+    cursor: pointer; 
+    height: 4vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    color:white;
+
+}
+.coffe{
+    flex-basis: 75%;
+    
+    background-color: royalblue;
+    font-size: 2vh;
+    text-align: center;
+    line-height: 12vh;
+    border-radius: 40%;
+    cursor: pointer; 
+    height: 12vh;
+    margin-top: 3vh;
+    margin-bottom: 4vh;
+    color:white;
+}
+.wc:hover{
+    background-image: url("https://cdn.pixabay.com/photo/2013/12/17/20/10/bubbles-230014__340.jpg");
+}
+.coffe:hover{
+    background-image: url("https://cdn.pixabay.com/photo/2017/08/14/22/23/coffe-grains-2642228__340.jpg");
+}
+.oneSeat:hover{
+    background-color: green;
+color: white;
+}
+.oneSeat~div:hover{
+background-color: green;
+color: white;
+}
+#staff{
+    background-color:yellow;
+    border-top-left-radius: 28%;
+    border-top-right-radius: 28%;
+
+}
+#staff:hover{
+    background-color: darkgoldenrod;
+}
+.summaryClient{
+     display: flex;
+     width:35%;
+     flex-direction: column;
+     position: fixed;
+     top:1%;
+     right:3%;
+   }
+
+/* wybór klasy i rodzaje miejsc */
+
+.movie-container {
+  margin-bottom: 1vh;
+  display: flex;
+  height:35.5vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(190, 185, 185);
+  border-radius: 5%;
+  color:white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3vh;
+  font-weight: bold;
+  padding: 2vh;
+}
+
+.movie-container select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  padding: 1vh 2vh;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  font-size: 2.5vh;
+  border-radius: 3%;
+  border: 1px solid gray;
+  color:gold;
+  font-weight: bold;
+}
+
+
+.nameFly{
+  font-size: 2vh;
+}
+.descrClass{
+  font-size: 1.5vh;
+}
+
+
+.showcase {
+  display: flex;
+  justify-content: space-around;
+  background: gray;
+  padding: 1vh 1vh;
+  border-radius: 5px;
+  margin: 2vh;
+  width: 50%;
+  
+
+  
+}
+.showcase .seat{
+    height: 6vh;
+    line-height: 3vh;
+    flex-basis: 30%;
+    display: flex;
+    color: white;
+    
+}
+.showcase small{
+  text-align: center;
+  padding-left: 0.8vh;
+  padding-top: 1vh;
+  font-size: 1.5vh;
+}
+
+.showcase .seat:not(.occupied):hover{
+cursor: default;
+transform: scale(1);
+}
+
+
+
+.summarySeatsTickets{
+  padding: 1vh;
+  border-radius: 5%;
+  background-color: rgb(190, 185, 185);
+  height:35.5vh;
+  text-align: center;
+  margin-bottom: 1vh;
+}
+.summarySeatsTickets div{
+  color:white;
+  padding: 1vh, 1vh;
+  font-size: 3vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+.summarySeatsTickets .text{
+  margin-top: 1vh;
+}
+
+.summarySeatsTickets span{
+  color:gold;
+  font-size: 4vh;
+}
+.submRes button{
+  letter-spacing: 4px;
+  padding: 0.4vh;
+  background-color: darkblue;
+  font-size: 2vh;
+  color:yellow;
+  font-weight: 750;
+  text-decoration: none;
+  border: 1px solid yellow;
+  border-radius: 10%;
+  transition: 0.3s;
+}
+.submRes button:hover{
+  background-color: gold;
+  color:darkblue;
+  border: 2px solid darkblue;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+/* kalkulator biletowy */
+.ticktetsCalc{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 25vh;
+    padding: 2vh 2vh 0 2vh;
+    align-items: center;
+    background-color: rgb(190, 185, 185);
+    color: white;
+    font-size: 3vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-radius: 5%;
+}
+
+.ticktetsCalc_inside{
+    padding-top: 1vh;
+    /* padding-bottom: 1vh; */
+}
+
+.ticktetsCalc_inside select{
+  padding: 0.3vh;
+  /* margin-top: 0.5vh; */
+  font-size: 2vh;
+  border-radius: 3%;
+  border: 1px solid gray;
+  color:gray;
+  font-weight: bold;
+}
+
+.resultField2{
+  color:gold;
+  font-size: 4vh;
+}
+.valueInput{
+  font-size: 2vh;
+  color: gray;
+}
+.calcCurrency{
+  font-size: 2.5vh;
+}
+
+@media(max-width:768px){
+  .mediumPlane{
+    width: 48%;
+  }
+  .summaryClient{
+   width: 45%;
+  }
+}
+
+@media(max-width:640px){
+  body{
+    width:200vw;
+  }
+  .summarySeatsTickets{
+    font-size: 1wv;
+  }
+}
+
+</style>
+
+</head>
+</head>
+     
+     <body>
+       <section class="mediumPlane">
+         <div class="pilot">Pilots of the plane</div>
+         <div class="buisnessClass">Buisness class</div>
+          <div class="business1">
+            <div class="business1_left">
+              <div class="seat oneSeat">1A</div>
+              <div class="seat">1C</div>
+              <div class="seat">2A</div>
+              <div class="seat">2C</div>
+              <div class="seat">3A</div>
+              <div class="seat">3C</div>
+              <div class="seat">4A</div>
+              <div class="seat">4C</div>
+              <div class="seat">5A</div>
+              <div class="seat">5C</div>
+              <div class="seat occupied">6A</div>
+              <div class="seat occupied">6C</div>         
+            </div>
+       
+          <div class="business1_right">
+              <div class="seat oneSeat">1D</div>
+              <div class="seat">1F</div>
+              <div class="seat">2D</div>
+              <div class="seat">2F</div>
+              <div class="seat">3D</div>
+              <div class="seat">3F</div>
+              <div class="seat">4D</div>
+              <div class="seat">4F</div>
+              <div class="seat occupied">5D</div>
+              <div class="seat">5F</div>
+              <div class="seat">6D</div>
+              <div class="seat">6F</div>         
+          </div>
+          <div class="wc"><i class="fas fa-restroom"></i>WC</div>
+          <div class="wc"><i class="fas fa-restroom"></i>WC</div>
+          <div class="coffe"><i class="fas fa-coffee"></i>Coffe</div>
+      </div>
+
+      <div class="economyClass">Economy class</div>
+      <div class="economy">
+        <div class="economy_left">
+            <div class="seat oneSeat">1A</div>
+            <div class="seat">1B</div>
+            <div class="seat">1C</div>
+            <div class="seat">2A</div>
+            <div class="seat">2B</div>
+            <div class="seat">2C</div>
+            <div class="seat">3A</div>
+            <div class="seat">3B</div>
+            <div class="seat">3C</div>
+            <div class="seat">4A</div>
+            <div class="seat">4B</div>
+            <div class="seat">4C</div>
+            <div class="seat">5A</div>
+            <div class="seat">5B</div>
+            <div class="seat">5C</div>
+            <div class="seat">6A</div>
+            <div class="seat occupied">6B</div>
+            <div class="seat occupied">6C</div>
+            <div class="seat">7A</div>
+            <div class="seat">7B</div>
+            <div class="seat">7C</div>
+            <div class="seat">8A</div>
+            <div class="seat">8B</div>
+            <div class="seat">8C</div>
+            <div class="seat">9A</div>
+            <div class="seat">9B</div>
+            <div class="seat">9C</div>
+            <div class="seat">10A</div>
+            <div class="seat">10B</div>
+            <div class="seat">10C</div>
+            <div class="seat">11A</div>
+            <div class="seat">11B</div>
+            <div class="seat">11C</div>
+            <div class="seat">12A</div>
+            <div class="seat">12B</div>
+            <div class="seat">12C</div>
+            <div class="seat">13A</div>
+            <div class="seat">13B</div>
+            <div class="seat occupied">13C</div>
+            <div class="seat">14A</div>
+            <div class="seat">14B</div>
+            <div class="seat">14C</div>
+            <div class="seat">15A</div>
+            <div class="seat">15B</div>
+            <div class="seat">15C</div>
+            <div class="seat">16A</div>
+            <div class="seat">16B</div>
+            <div class="seat">16C</div>
+            <div class="seat">17A</div>
+            <div class="seat">17B</div>
+            <div class="seat">17C</div>
+            <div id="staff">staff</div>
+            <div id="staff">staff</div>
+            <div id="staff">staff</div>
+            
+        </div> 
+        <div class="economy_right">
+          <div class="seat oneSeat">1D</div>
+          <div class="seat">1E</div>
+          <div class="seat">1F</div>
+          <div class="seat">2D</div>
+          <div class="seat">2E</div>
+          <div class="seat">2F</div>
+          <div class="seat">3D</div>
+          <div class="seat">3E</div>
+          <div class="seat">3F</div>
+          <div class="seat">4D</div>
+          <div class="seat">4E</div>
+          <div class="seat">4F</div>
+          <div class="seat">5D</div>
+          <div class="seat">5E</div>
+          <div class="seat">5F</div>
+          <div class="seat">6D</div>
+          <div class="seat">6E</div>
+          <div class="seat">6F</div>
+          <div class="seat">7D</div>
+          <div class="seat">7E</div>
+          <div class="seat">7F</div>
+          <div class="seat">8D</div>
+          <div class="seat">8E</div>
+          <div class="seat">8F</div>
+          <div class="seat occupied">9D</div>
+          <div class="seat">9E</div>
+          <div class="seat">9F</div>
+          <div class="seat occupied">10D</div>
+          <div class="seat">10E</div>
+          <div class="seat">10F</div>
+          <div class="seat">11D</div>
+          <div class="seat">11E</div>
+          <div class="seat">11F</div>
+          <div class="seat">12D</div>
+          <div class="seat">12E</div>
+          <div class="seat">12F</div>
+          <div class="seat">13D</div>
+          <div class="seat">13E</div>
+          <div class="seat">13F</div>
+          <div class="seat">14D</div>
+          <div class="seat">14E</div>
+          <div class="seat">14F</div>
+          <div class="seat">15D</div>
+          <div class="seat">15E</div>
+          <div class="seat">15F</div>
+          <div class="seat">16D</div>
+          <div class="seat">16E</div>
+          <div class="seat">16F</div>
+          <div class="seat">17D</div>
+          <div class="seat occupied">17E</div>
+          <div class="seat">17F</div>
+          <div id="staff">staff</div>
+          <div id="staff">staff</div>
+          <div id="staff">staff</div>
+            
+        </div> 
+        <div class="wc"><i class="fas fa-restroom"></i>WC</div>
+        <div class="wc"><i class="fas fa-restroom"></i>WC</div>
+        <div class="coffe"><i class="fas fa-coffee"></i>Coffe</div>
+      </div>
+        
+
+      
+    </section>
+    
+    <section class="summaryClient">
+      
+       
+
+        <div class="movie-container">
+          <p>Lot Rzeszów - Paryż</p>
+          <p class="nameFly"> Samolot linie europejskie:<a href="https://en.wikipedia.org/wiki/Airbus_A319"> Airbus A319</a></p>
+          <p class="descrClass">Klasa biznesowa: 24 miejsc.</p>
+          <p class="descrClass">Klasa ekonomiczna: 96 miejsc.</p>
+            <label>Wybierz klasę: </label>
+            <select id="movie">
+              <option value="850">Ekonomiczna 850 PLN</option>
+              <option value="1250">Biznesowa 1250 PLN</option>
+              
+            </select>
+            
+            <div class="showcase">
+              <div class="seat free"><small>Wolne</small></div>
+              <div class="seat selected"><small>Wybrane</small></div>
+              <div class="seat occupied"><small>Zajęte</small></div>
+            </div>
+        </div>
+
+        <div class="summarySeatsTickets">
+    
+          <div class="text">
+            Ilość wybranych miejsc: <br>
+            <span id="count">0</span>. <br>
+            Sumaryczna opłata biletowa:  <br>
+            <span id="total">0</span> PLN.
+          </div>
+          <div class="text2">
+            Wybrane numery siedzień: <br>
+            <span id="seatNumber"></span>.
+          </div>
+          <div class="submRes"><a href=""><button>Rezerwuj</button></a></div>
+        </div>
+
+        <!-- kalkulator biletowy --- -->
+      
+        <div class="ticktetsCalc"> Kalkulator biletowy:
+          <div class="ticktetsCalc_inside">
+            <p><input type="text" id="value" placeholder="wpisz cenę biletu w PLN" class="valueInput" > PLN</p>
+            <br>
+            <select name="currency" id="currency" class="currencySelect">
+              <option value="" disabled selected>Wybierz walutę:</option>
+              <option value="usd">Dolar amerykański</option>
+              <option value="eur">Euro</option>
+              <option value="jpy">Jen</option>
+              <option value="gbp">Funt szterling</option>
+              <option value="aud">Dolar australijski</option>
+              <option value="chf">Frank szwajcarski</option>
+              <option value="cnh">Chińskie reminbi</option>
+              <option value="sek">Szwedzka korona</option>
+              <option value="nzd">Dolar nowozelandzki</option>
+            </select>
+          </div>
+          <div class="currencyFinal">
+          <div class="calcCurrency">Po przeliczeniu:</div>
+          <!-- <div id="selected" class="resultField"></div> -->
+            <div id="selected2" class="resultField2"></div>
+            
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+   
+
+
+     
+<script>
+
+const container = document.querySelector('.mediumPlane');
+const seats = document.querySelectorAll('mediumPlane.seat:not(.occupied)');
+const count = document.getElementById('count');
+const total = document.getElementById('total');
+const movieSelect = document.getElementById('movie');
+let seatNumber = document.getElementById('seatNumber');
+
+
+let ticketPrice = +movieSelect.value;
+
+//Update total and count
+function updateSelectedCount() {
+  const selectedSeats = document.querySelectorAll('.mediumPlane .seat.selected');
+  const seatNumbers = [...selectedSeats].map((seat)=>seat.innerText);
+  const selectedSeatsCount = selectedSeats.length;
+  count.innerText = selectedSeatsCount;
+  total.innerText = selectedSeatsCount * ticketPrice;
+  seatNumber.innerText = seatNumbers.join(', ') || '-';
+}
+
+//Movie Select Event
+movieSelect.addEventListener('change', e => {
+  ticketPrice = +e.target.value;
+  updateSelectedCount();
+});
+
+//Seat click event
+container.addEventListener('click', e => {
+  if (e.target.classList.contains('seat') &&
+     !e.target.classList.contains('occupied')) {
+    e.target.classList.toggle('selected');
+  }
+  updateSelectedCount();
+});
+
+// ticket calculator---
+const currency = document.getElementById('currency'),
+  showOption = document.getElementById('selected'),
+  showOption2 = document.getElementById('selected2'),
+  inputValue = document.getElementById('value');
+
+currency.addEventListener('change', function () {
+  fetch(`https://api.nbp.pl/api/exchangerates/rates/a/${this.value}/?format=json`)
+    .then((resp) => resp.json())
+    .then(function (data) {
+      console.log(data);
+      showOption2.innerHTML = ` ${(((inputValue.value)/(data.rates[0].mid)).toFixed(2))} `;
+    })
+});
+</script>    
+     </body>
+</html>

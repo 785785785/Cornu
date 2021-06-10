@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cornu - Loty z Rzeszowa</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class ="header">
+        <div class="logoMenu">
+                <div class="mainLogo">
+                <h1><i class="fas fa-feather-alt"></i>Cornu</h1>
+                </div>
+                
+                <div class="burger">
+                    <i class="fas fa-bars ic-menu"></i>
+                    <i class="fas fa-arrow-up ic-menu off"></i>
+                   
+                </div>
+                <nav class="off">
+                    <ul>
+                        <li><a href=""><i class="fas fa-home"></i>O nas</a></li>
+                        <li><a href=""><i class="fas fa-shopping-basket"></i>Okazje</a></li>
+                        <li><a href=""><i class="fas fa-users"></i>Kontakt</a></li>
+                        <li><a href=""><i class="fas fa-sign-in-alt"></i>Zaloguj się</a></li>
+                    </ul>
+                </nav>
+        </div>
+    </header>
+    <hr>
+    <main class=main>
+            <div class="reservationInfo">
+                <div class="form_reservation">
+                    <form action="">
+                        <label for="departure"><i class="fas fa-plane-departure"></i>Lecisz z </label>
+                            <select name="departure" id="departure">
+                                <option value="city_departure">Rzeszów</option>
+                            </select>
+                        <label for="arrival"><i class="fas fa-plane-arrival"></i>Lecisz do</label>
+                            <select name="arrival" id="arrival">
+                            <option value="city_arrival">Warszawa</option>
+                            <option value="city_arrival">Paryż</option>
+                            <option value="city_arrival">Tokio</option>
+                            </select>
+                        <label for="value_passangers"><i class="fas fa-user-edit"></i>Liczba osób</label>
+                            <select name="value_passangers" id="value_passangers">
+                            <option value="value_passangers">1</option>
+                            <option value="value_passangers">2</option>
+                            <option value="value_passangers">3</option>
+                            <option value="value_passangers">4</option>
+                            <option value="value_passangers">5</option>
+                            </select>
+                        <label for="departureDate">Data wylotu</label>
+                            <input type="date" name="departureDate" id="today" min="2021-02-28">
+                        <label for="arrivalDate">Data powrotu</label>
+                            <input type="date" name="arrivalDate" id="">
+                        <a href="#" class="button" id="button">Potwierdź</a>
+                    </form>
+                    <div class="popup">
+                        <div class="popup-content">
+                        <img src="./assets/img/close2.jpg" alt="Close" class="close">
+                        <form action="">
+                            <label for="name">Imię</label>
+                            <input type="text" name="name">
+                            <label for="surname">Nazwisko</label>
+                            <input type="text" name="surname">
+                            <label for="email">Adres e-mail</label>
+                            <input type="text" name="surname">
+                            <label for="password">Hasło</label>
+                            <input type="password" name="password">
+                        </form>
+                        <a href="#" class="button1">Login</a>
+                        </div>
+                    </div>
+                </div>
+
+             <!-- data czas pogoda city--------------------------------------- -->
+                <div class="data_time_weather_city">
+                    <div class="data_time_weather">
+                            <div id="date_now">
+                            </div>
+                            <div id="time_now"></div>
+                            <div class=departure_weather>
+                                <div id="output"></div>
+                                <div id="image"></div>
+                            </div>
+                    </div>
+                    <section class="imgRzeszow">
+                        <img  src="https://cdn.pixabay.com/photo/2015/09/25/08/21/monument-956820__340.jpg" alt="Rzeszów centrum">
+                        <img  src="https://cdn.pixabay.com/photo/2020/01/29/19/28/rzeszow-4803428__340.jpg" alt="Rzeszów Wisłok">
+                        <img  src="https://cdn.pixabay.com/photo/2019/07/17/14/11/the-palace-4344027__340.jpg" alt="Rzeszów pałac">
+                        <h5>Rzeszów-centrum</h5>
+                        <h5>Rzeszów-Wisłok</h5>
+                        <h5>Rzeszów-pałac</h5>
+                    </section>
+                </div>
+            </div>
+    </main>
+    <section class="choice">
+        <section class="place_baggage">
+            <div class="place">
+                <div class="seatChoice">
+                    <div class=seatPerson>Wybierz miejsce w samolocie</div>
+                    <!-- <label for="plane">Wybór miejsca w samolocie</label>  -->
+                    <input id="plane" type="text" placeholder="Wpisz lotnisko docelowe">
+                    <button id="btn">Potwierdź</button>
+                    <div class="flySmall">Samolot linie regionalne<a href="./small_fly.html"> Xi'an MA60</a></div>
+                    <div class="flyMedium">Samolot linie europejskie<a href="./medium_fly.html"> Airbus A319(319)</a></div>
+                    <div class="flyMax">Samolot linie międzykontynentalne<a href="./max_fly.html"> Airbus A330-200(332)</a></div>
+                    <div class="typeFly active"></div>
+                    <div class="typeFly active1"></div>
+                    <div class="typeFly active2"></div>
+                </div>
+            </div>
+            <div class="baggage">
+                <button id="myBtn" class="choiceW"> <i class="fas fa-suitcase"></i> <i class="fas fa-suitcase-rolling"></i> <i class="fas fa-luggage-cart"></i> Kalkulator bagażowy</button>
+            </div> 
+        </section>
+        <section class="weatherCitiesLong">
+            <div class="weatherAllCities">
+                  <button class="choiceW weatherCity">Aktualna pogoda dowolne miejsce</button>
+            </div>
+            <div class="weatherDeparturesLong">
+                <button class="choiceW cityLongWeather">Pogoda długoterminowa lotniska docelowe</button>
+            </div>
+        </section>
+    </section>
+    <!-- okienko bagaż--- -->
+    <div id="myModal" class="modal">
+
+    <div class="modal-content1">
+    <span class="close1">&times;</span>
+        <div class="calcBaggage">
+           
+        
+                <div class=baggageDesc>
+                    <div>
+                        <i class="fas fa-suitcase"></i> <span>Bagaż podręczny</span>  - 1 sztuka bagażu o wymiarach 55x40x23 cm i maksymalnej wadze do 8 kilogramów oraz mała sztuka bagażu (torebka lub torba na laptopa) o wymiarach 40x30x10 cm. <br><span class="infoPriceBag">Bezpłatny</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-suitcase-rolling"></i> <span>Bagaż rejestrowany</span> - 1 sztuka bagażu  o maksymalnej sumie wymiarów 158  cm  (szerokość X + wysokość Y + głębokość Z) i wadze do 23 kilogramów.<br><span class="infoPriceBag">Bezpłatny</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-luggage-cart"></i> <span> Nadbagaż</span> - sztuka bagażu jest uważana za nadbagaż, jeżeli jej waga przekracza 23 kg (do 32 kg) oraz/lub jej wymiary przekraczają 158 cm (suma wysokości X + szerokości Y + głębokości Z do maksymalnie 292 cm).<br><span class="infoPriceBag">Płatny</span>
+                    </div>
+                </div>  
+                <div class="baggageForm">
+                    <div class="bagPerson1">
+                        <p >Opcje bagażowe pasazer 1:</p>
+                            <form action="">
+                                
+                                <p>Bagaż podręczny:
+                                    <br/>
+                                    <input type="radio" name="baggageP"
+                                    value="0" checked="checked" /> 0szt
+                                    <input type="radio" name="baggageP"
+                                    value="1" checked="checked" /> 1szt
+                                </p>
+                            </form>
+                            <form action="">
+                                <p>Bagaż rejestrowany:
+                                    <br/>
+                                    <input type="radio" name="baggageR"
+                                    value="0" checked="checked" /> 0szt
+                                    <input type="radio" name="baggageR"
+                                    value="1" checked="checked" /> 1szt
+                                    <input type="radio" name="baggageR"
+                                    value="2" /> 2 szt
+                                    <input type="radio" name="baggageR"
+                                    value="3" /> 3 szt
+                                </p>
+                            </form>
+                            <form action="">
+                                <p>Nadbagaż:
+                                    <br/>
+                                    <input type="radio" name="baggageN"
+                                    value="0" checked="checked" /> 0szt
+                                    <input type="radio" name="baggageN"
+                                    value="1" checked="checked" /> 1szt
+                                    <input type="radio" name="baggageN"
+                                    value="2" /> 2 szt
+                                    <input type="radio" name="baggageN"
+                                    value="3" /> 3 szt
+                                </p>
+                        
+                               
+                            </form>
+                            <a href=""><button class="baggSubmit">Potwierdź</button></a>
+                    </div>
+                    <div class="bagPerson1">
+                        <p>Opcje bagażowe pasazer 2:</p>
+                            <form action="">
+                                
+                                <p>Bagaż podręczny:
+                                    <br/>
+                                    <input type="radio" name="baggageP"
+                                    value="0" checked="checked" /> 0szt
+                                    <input type="radio" name="baggageP"
+                                    value="1" checked="checked" /> 1szt
+                                </p>
+                            </form>
+                            <form action="">
+                                <p>Bagaż rejestrowany:
+                                    <br/>
+                                    <input type="radio" name="baggageR"
+                                    value="0" checked="checked" /> 0szt
+                                    <input type="radio" name="baggageR"
+                                    value="1" checked="checked" /> 1szt
+                                    <input type="radio" name="baggageR"
+                                    value="2" /> 2 szt
+                                    <input type="radio" name="baggageR"
+                                    value="3" /> 3 szt
+                                </p>
+                            </form>
+                            <form action="">
+                                <p>Nadbagaż:
+                                    <br/>
+                                    <input type="radio" name="baggageN"
+                                    value="0" checked="checked" /> 0szt
+                                    <input type="radio" name="baggageN"
+                                    value="1" checked="checked" /> 1szt
+                                    <input type="radio" name="baggageN"
+                                    value="2" /> 2 szt
+                                    <input type="radio" name="baggageN"
+                                    value="3" /> 3 szt
+                                </p>
+                        
+                               
+                            </form>
+                            <a href=""><button class="baggSubmit">Potwierdź</button></a>
+                    </div>
+                    <div class="bagPerson1">
+                        <p>Opcje bagażowe pasazer 3:</p>
+                            <form action="">
+                                
+                                <p>Bagaż podręczny:
+                                    <br/>
+                                    <input type="radio" name="baggageP"
+                                    value="0" checked="checked" /> 0szt
+                                    <input type="radio" name="baggageP"
+                                    value="1" checked="checked" /> 1szt
+                                </p>
+                            </form>
+                            <form action="">
+                                <p>Bagaż rejestrowany:
+                                    <br/>
+                                    <input type="radio" name="baggageR"
+                                    value="0" checked="checked" /> 0szt
+                                    <input type="radio" name="baggageR"
+                                    value="1" checked="checked" /> 1szt
+                                    <input type="radio" name="baggageR"
+                                    value="2" /> 2 szt
+                                    <input type="radio" name="baggageR"
+                                    value="3" /> 3 szt
+                                </p>
+                            </form>
+                            <form action="">
+                                <p>Nadbagaż:
+                                    <br/>
+                                    <input type="radio" name="baggageN"
+                                    value="0" checked="checked" /> 0szt
+                                    <input type="radio" name="baggageN"
+                                    value="1" checked="checked" /> 1szt
+                                    <input type="radio" name="baggageN"
+                                    value="2" /> 2 szt
+                                    <input type="radio" name="baggageN"
+                                    value="3" /> 3 szt
+                                </p>
+                              </form>
+                            <a href=""><button class="baggSubmit">Potwierdź</button></a>
+                    </div>
+                        
+                </div>
+        </div>
+    </div>
+    
+    </div>
+    <!-- popModal pogoda różne miasta--- -->
+    <section class="modalC-wrapC">
+    <div class="modalC">
+        <div class=wrapperC>
+            <h6>Sprawdź pogodę w miejscu docelowym</h6>
+            <input type="text" class="inputTxt" placeholder="Wpisz Miasto docelowe"><br>
+            <input type="submit" value="Potwierdź" class="btn">
+            <div class="showData">                
+        </div>
+     <span class="hideC">X</span>
+    </div>
+    </section>
+    <!-- popModal pogoda długoterminowa miasta przylotu--- -->
+    
+    <section class="modalWeatherLong">
+    <div class="modalW">
+        <div class=wrapperW>
+            <div class="longWeather">
+                <table>
+                    <caption align="top">Pogoda Tokio</caption>
+                    <tr><th>Kiedy</th><th><i class="fas fa-thermometer-three-quarters"></i>&#176C</th><th><i class="fas fa-cloud"></i>%</th>
+                    </tr>
+                    <tr>
+                        <td>jutro</td>
+                        <td id="output1"></td>
+                        <td id="output1a"></td>
+                    </tr>
+                    <tr>
+                        <td>pojutrze</td>
+                        <td id="output2"></td> 
+                        <td id="output2a"></td>
+                    </tr>
+                    <tr>
+                        <td>za 3 dni</td>
+                        <td id="output3"></td> 
+                        <td id="output3a"></td>
+                    </tr>
+                    <tr>
+                            <td>za 4 dni</td>
+                            <td id="output4"></td> 
+                            <td id="output4a"></td>
+                        </tr>
+                        <tr>
+                            <td>za 5 dni</td>
+                            <td id="output5"></td> 
+                            <td id="output5a"></td>
+                        </tr>
+                        <tr>
+                            <td>za 6 dni</td>
+                            <td id="output6"></td> 
+                            <td id="output6a"></td>
+                        </tr>
+                        <tr>
+                            <td>za 7 dni</td>
+                            <td id="output7"></td> 
+                            <td id="output7a"></td>
+                        </tr>
+        
+                
+                </table>
+        
+                
+               
+        <!-- <table border="3" cellpadding="6"> -->
+            <table>
+                    <caption align="top">Pogoda Paryż</caption>
+                    <tr><th>Kiedy</th><th><i class="fas fa-thermometer-three-quarters"></i>&#176C</th><th><i class="fas fa-cloud"></i>%</th>
+        
+                    </tr>
+                    
+                        <tr>
+                            <td>jutro</td>
+                            <td id="output1p"></td>
+                            <td id="output1pa"></td>
+                        </tr>
+                        <tr>
+                            <td>pojutrze</td>
+                            <td id="output2p"></td> 
+                            <td id="output2pa"></td>
+                        </tr>
+                        <tr>
+                            <td>za 3 dni</td>
+                            <td id="output3p"></td> 
+                            <td id="output3pa"></td>
+                        </tr>
+                        <tr>
+                            <td>za 4 dni</td>
+                            <td id="output4p"></td> 
+                            <td id="output4pa"></td>
+                        </tr>
+                        <tr>
+                            <td>za 5 dni</td>
+                            <td id="output5p"></td> 
+                            <td id="output5pa"></td>
+                        </tr>
+                        <tr>
+                            <td>za 6 dni</td>
+                            <td id="output6p"></td> 
+                            <td id="output6pa"></td>
+                        </tr>
+                        <tr>
+                            <td>za 7 dni</td>
+                            <td id="output7p"></td> 
+                            <td id="output7pa"></td>
+                        </tr>
+        
+                
+                </table>
+        
+        
+                <!-- <table border="3" cellpadding="6"> -->
+                    <table>
+                    <caption align="top">Pogoda Warszawa</caption>
+                    <tr><th>Kiedy</th><th><i class="fas fa-thermometer-three-quarters"></i>&#176C</th><th><i class="fas fa-cloud"></i>%</th>
+        
+                    </tr>
+                    
+                        <tr>
+                            <td>jutro</td>
+                            <td id="output1w"></td>
+                            <td id="output1wa"></td>
+                        </tr>
+                        <tr>
+                            <td>pojutrze</td>
+                            <td id="output2w"></td> 
+                            <td id="output2wa"></td>
+                        </tr>
+                        <tr>
+                            <td>za 3 dni</td>
+                            <td id="output3w"></td> 
+                            <td id="output3wa"></td>
+                        </tr>
+                        <tr>
+                            <td>za 4 dni</td>
+                            <td id="output4w"></td> 
+                            <td id="output4wa"></td>
+                        </tr>
+                        <tr>
+                            <td>za 5 dni</td>
+                            <td id="output5w"></td> 
+                            <td id="output5wa"></td>
+                        </tr>
+                        <tr>
+                            <td>za 6 dni</td>
+                            <td id="output6w"></td> 
+                            <td id="output6wa"></td>
+                        </tr>
+                        <tr>
+                            <td>za 7 dni</td>
+                            <td id="output7w"></td> 
+                            <td id="output7wa"></td>
+                        </tr>
+        
+                
+                </table>
+            </div>
+
+
+            
+            
+        </div>
+     <span class="hideW">X</span>
+    </div>
+    </section>
+    <footer class = "footer">
+      <div>Strona rezerwacyjna na potrzeby studiów podyplomowych</div>
+      <div>&copy;Elżbieta i Dariusz Kubaszewscy</div>
+    </footer>
+
+<!-- <script src = "bundle.js"></script>     -->
+</body>
+</html>
